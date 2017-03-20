@@ -70,7 +70,10 @@ though you might want to repartition and reformat.
 Next, copy over all the required files (`grub.cfg` and files it includes, theme, font) :
 
     rsync -avP grub2/ ${USBMNT:-/mnt}/boot/grub2
-
+    
+ -or- (Ubuntu, for instance)
+    rsync -avP grub2/ ${USBMNT:-/mnt}/boot/grub
+ 
 If you want to avoid keeping unused translations, themes, etc, use this instead :
 
     rsync -avP --delete --exclude=i386-pc grub2/ ${USBMNT:-/mnt}/boot/grub2
